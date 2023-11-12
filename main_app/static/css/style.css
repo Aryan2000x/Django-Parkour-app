@@ -1,0 +1,292 @@
+body {
+  height: 100%;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+}
+.form-container {
+  display: flex;
+  background-color: #f6f9ff;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border: 1px solid rgba(212, 212, 212, 0.829);
+  width: 500px;
+  justify-content: center;
+  border-radius: 2%;
+}
+.other {
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f6f9ff;
+  align-content: center;
+  border-radius: 2%;
+  border: 1px solid rgba(212, 212, 212, 0.829);
+}
+.fixed-bio {
+  top: 76px;
+  position: sticky;
+}
+.form {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+.post-box {
+  align-items: center;
+  background-color: #f6f9ff;
+  border: 1px solid rgba(212, 212, 212, 0.829);
+  align-content: center;
+  border-radius: 2%;
+}
+.post {
+  width: 100%;
+  max-width: 100%;
+  padding: 20px;
+  margin: auto;
+}
+.post-photo {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 1%;
+}
+.post-profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.profile-img {
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+}
+
+.col {
+  padding-bottom: 20px;
+}
+input {
+  width: 100%;
+}
+.form input {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  color: #666666;
+  padding: 4px 10px;
+}
+.form textarea {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  color: #666666;
+  padding: 4px 10px;
+  height: 60px;
+}
+
+.buttonSolid {
+  background-color: #44c767;
+  border-radius: 28px;
+  border: 1px solid #18ab29;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 17px;
+  padding: 7px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #2f6627;
+}
+.buttonSolid:hover {
+  background-color: #5cbf2a;
+}
+
+.buttonWhite {
+  border-radius: 28px;
+  border: 1px solid #18ab29;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 17px;
+  padding: 7px;
+  text-align: center;
+  color: black;
+}
+
+a {
+  color: black;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none !important;
+}
+
+.container {
+  width: 70%;
+  margin-top: 20px;
+}
+.card {
+  width: 300px;
+}
+
+hr {
+  margin-top: 10px;
+}
+
+#frozen-header {
+  top: 0;
+  position: sticky;
+  z-index: 20;
+}
+
+#profile-pic {
+  max-width: 100px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+.bio-profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  align-content: center;
+}
+.navbar-brand {
+  color: black;
+}
+
+.nav-item {
+  color: black;
+}
+
+.buttonDelete {
+  background-color: #e4685d;
+  border-radius: 4px;
+  border: 1px solid #ffffff;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 10px;
+  text-decoration: none;
+}
+.buttonDelete:hover {
+  background-color: #eb675e;
+}
+
+.buttonEdit {
+  background-color: #ffec64;
+  border-radius: 4px;
+  border: 1px solid #ffaa22;
+  display: inline-block;
+  cursor: pointer;
+  color: #333333;
+  font-size: 10px;
+  text-decoration: none;
+}
+.buttonEdit:hover {
+  background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+  background-color: #ffab23;
+}
+
+.logoText {
+  font-family: "Indie Flower", cursive;
+  font-weight: 100px;
+}
+.my-profile {
+  text-align: center;
+}
+
+.bio-tag {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.bio {
+  margin: 0 auto;
+  max-width: 400px;
+  text-align: center;
+}
+
+.profile-content {
+  text-align: center;
+}
+
+.fixed-bio {
+  top: 95px;
+  max-width: 600px;
+}
+
+.post-box {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  max-width: 600px;
+}
+
+.change-position {
+  position: relative;
+}
+
+.posted-at {
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+.edit-btn {
+  margin: 0;
+  position: absolute;
+  right: 40%;
+}
+
+.delete-btn {
+  margin: 0;
+  position: absolute;
+  left: 40%;
+}
+
+.card-action {
+  min-height: 50px;
+  margin-bottom: 15px;
+}
+
+.profile-bio {
+  max-width: 600px;
+}
+
+.delete-header {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.delete-msg {
+  text-align: center;
+}
+
+.confirm-dlt-btn {
+  display: inline-block;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+}
+
+.cancel-btn {
+  display: inline-block;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  padding: 8px 8px 8px 8px;
+}
+
+.registration-header {
+  text-align: center;
+  margin-top: 30px;
+}

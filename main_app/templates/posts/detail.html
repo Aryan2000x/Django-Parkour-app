@@ -1,0 +1,71 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="post-box">
+        <div class="post">
+          {% for photo in post.user.profilepicture_set.all %}
+          <img class="post-profile-pic" src="{{photo.url}}" />
+          {% empty %}
+          <img class="post-profile-pic" src="../../static/image/default.png" />
+          {% endfor %}
+        @{{ post.user.username}}
+          <hr />
+          {% for photo in post.photo_set.all %}
+          <p>{{ post.text }}</p>
+          <img class="post-photo" src="{{photo.url}}" />
+          {% empty %}
+          <div class="card-panel teal-text center-align">
+            No Photos Uploaded
+          </div>
+          {% endfor %}
+          <p>{{ post.created_at }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="post-box">
+        <div class="post">
+
+          <table>
+            <tbody>
+              {% for comment in post.comment_set.all %}
+              {% if comment.user.id == user.id %}
+              <tr>
+                <td>{{ comment.comment }}</td>
+                <td><small>{{ comment.created_at }}</small></td>
+                <td>
+               <small><a href="{% url 'comment_delete' comment.id post.id %}"><button class="buttonDelete"> X </button></a></small> 
+               <small><a href="{% url 'comment_update' comment.id %}"><button class="buttonEdit"> I </button></a></small> </a>
+                </td>
+              </tr>
+        {%endif %} {% endfor %}
+          
+            </tbody>
+          </table>
+          <div class="form">
+              <form
+                action="{% url 'add_comment' post.id user.id %}"
+                method="post">
+                {% csrf_token %} 
+                
+                <div class="form-group">
+                  <label for="username">Add Comment</label>
+                  {{ comment_form.comment}}
+                </div>
+                
+               
+                <button type="submit" class="buttonSolid btn-block" value="">Add comment</button>
+              </form>
+  
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

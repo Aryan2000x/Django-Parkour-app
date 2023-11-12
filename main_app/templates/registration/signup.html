@@ -1,0 +1,33 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1 class="registration-header">Sign Up</h1>
+
+<div class="box">
+  <div class="form-container">
+    <div class="form">
+      {% if error_message %}
+      <p class="red-text">{{ error_message }}</p>
+      {% endif %}
+
+      <form method="post" action="{% url 'signup' %}">
+        <h1 class="h3 mb-3 fw-normal">Please Signup</h1>
+        {% csrf_token %}
+        <label for="username">Username</label>
+        <div class="form-group">{{form.username}}</div>
+        <label for="">First Name</label>
+        <div class="form-group">{{form.first_name}}</div>
+        <label for="">Last Name</label>
+        <div class="form-group">{{form.last_name}}</div>
+        <label for="">Email</label>
+        <div class="form-group">{{form.email}}</div>
+        <label class="" for="username">Password</label>
+        <div class="form-group">{{form.password1}}</div>
+        <label for="">Cofirm Password</label>
+        <div class="form-group">{{form.password2}}</div>
+        
+        <button type="submit" class="buttonSolid btn-block" value="signup"> signup </form>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
